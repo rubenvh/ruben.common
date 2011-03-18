@@ -2,8 +2,10 @@ package ruben.common.configuration;
 
 import java.util.Iterator;
 
-public interface IConfigurationFile {
-	 Iterator<String> keys();
+public interface IConfigurationFile
+{
+	Iterator<String> keys();
+
 	String get(String key);
 
 }
