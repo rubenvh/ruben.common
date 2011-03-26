@@ -3,22 +3,25 @@ package ruben.common.configuration;
 import java.util.Iterator;
 import java.util.TreeMap;
 
-import processing.core.PApplet;
 
 public class ConfigurationFile implements IConfigurationFile {
 
-	private String _fileName;
-	private PApplet _pApplet;
+	//private String _fileName;
+	//private PApplet _pApplet;
 	private TreeMap<String, String> _map;
 	
-	public ConfigurationFile(PApplet pApplet, String file) {
-		_fileName = file;
-		_pApplet = pApplet;
-		Init();
+	public ConfigurationFile(String[] lines)
+	{
+		Init(lines);
+	}
+	public ConfigurationFile(String file) {
+		// TODO: load file into string array
+		
+		Init(null);
 	}
 
-	private void Init() {
-		String[] lines = _pApplet.loadStrings(_fileName);
+	private void Init(String[] lines) {
+//		String[] lines = _pApplet.loadStrings(_fileName);
 		_map = new TreeMap<String, String>();
 
 		for (int i = 0; i < lines.length; i++) {
