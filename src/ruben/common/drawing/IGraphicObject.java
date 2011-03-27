@@ -44,7 +44,9 @@ public interface IGraphicObject
 	
 	public int GetLineSize();
 	public IGraphicObject SetLineSize(int size);
-	
+
+	public IGraphicObject MarkAsDeleted(boolean isDeleted);
+	public boolean IsDeleted();
 	// public ArrayList<IGraphicObject> GetChildren();
 
 }

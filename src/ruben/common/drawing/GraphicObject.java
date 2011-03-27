@@ -5,6 +5,7 @@ import java.util.List;
 
 abstract public class GraphicObject implements IGraphicObject {
 
+	private boolean _isDeleted = false;
 	private boolean _isSelected = false;
 	private int _color = 255;
 	private int _lineSize = 1;
@@ -53,5 +54,12 @@ abstract public class GraphicObject implements IGraphicObject {
 	
 	public long GetAge() { return _age; }
 	public IGraphicObject Age() { _age++; return this; }
+	
+	public IGraphicObject MarkAsDeleted(boolean isDeleted) {
+		_isDeleted = isDeleted;
+		return this;
+	}
+	
+	public boolean IsDeleted() { return _isDeleted; }
 
 }

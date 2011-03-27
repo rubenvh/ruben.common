@@ -22,6 +22,8 @@ public interface IDrawingSystem {
 	 * @param y1
 	 */
 	public abstract Point AddLine(Point target);
+	
+	public abstract Line AddLine(Line target);
 
 	public abstract void Wipe(Point target);
 	
