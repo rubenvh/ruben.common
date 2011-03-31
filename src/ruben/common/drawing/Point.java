@@ -2,6 +2,7 @@ package ruben.common.drawing;
 
 public class Point extends GraphicObject implements IGraphicObject {
 
+	private int _id;
 	private int _x;
 	private int _y;
 
@@ -55,6 +56,9 @@ public class Point extends GraphicObject implements IGraphicObject {
 	public int getY() {
 		return _y;
 	}
+	
+	public int get_id() { return _id; }
+	public Point set_id(int id) { _id = id; return this; }
 	
 
 	//

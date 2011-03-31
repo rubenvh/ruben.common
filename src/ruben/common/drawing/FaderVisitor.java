@@ -62,7 +62,7 @@ public class FaderVisitor extends GraphicObjectVisitor
 			{
 				// fluctuate until zero
 				g.SetColor(Math.max(0, g.GetColor() + _randomizer.nextInt(6)
-						- 2)); // [-2,3]
+						- 3)); // [-3,2]
 			}
 			else
 			{
