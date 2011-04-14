@@ -91,6 +91,8 @@ public class FaderVisitor extends GraphicObjectVisitor
 	public void Visit(Line g)
 	{
 		Fade(g);
+		g.getP1().Age();
+		g.getP2().Age();
 	}
 
 	@Override

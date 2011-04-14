@@ -63,6 +63,22 @@ public class Line extends GraphicObject implements IGraphicObject {
 	//
 	// Other methods
 	//
+	
+	
+	public IGraphicObject SetColor(int color) {
+		
+		_p1.SetColor(color);
+		_p2.SetColor(color);
+		
+		return super.SetColor(color);
+	}
+	
+	
+	public IGraphicObject SetLineSize(int size) { 
+		_p1.SetLineSize(size);
+		_p2.SetLineSize(size);
+		return super.SetLineSize(size);
+	}
 
 	/**
 	 * @param v
@@ -98,5 +114,7 @@ public class Line extends GraphicObject implements IGraphicObject {
 //			(getP2().getY()-getP1().getY())*(p.getX()-getP1().getX());
 			
 	}
+	
+	
 
 }
